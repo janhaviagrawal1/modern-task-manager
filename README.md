@@ -1,32 +1,23 @@
-# 🚀 Fullstack Modern Task Manager
+# 🚀 Modern Task Manager
 
-A modern fullstack task management application built using React, Redux Toolkit, Node.js, Express, and MongoDB.
+A modern React-based task management application built with Vite and Redux Toolkit.
 
-This application allows users to create, delete, prioritize, and reorder tasks with persistent database storage and a clean responsive UI.
+This application allows users to create, delete, prioritize, and reorder tasks using drag-and-drop functionality with a responsive and clean user interface.
 
 ---
 
 # 📌 Features
 
-## ✅ Frontend Features
+## ✅ Core Features
 
 * Add new tasks
 * Delete tasks
 * Drag & drop task reordering
-* Priority-based task management
+* Task priority management
 * Dark/Light theme toggle
-* Responsive modern UI
-* Optimistic UI updates for smooth drag experience
-
----
-
-## ✅ Backend Features
-
-* REST API integration
-* MongoDB database persistence
-* Task order persistence
-* Express.js API routes
-* Mongoose schema modeling
+* Responsive UI design
+* Local state management using Redux Toolkit
+* Smooth drag-and-drop interactions
 
 ---
 
@@ -37,45 +28,34 @@ This application allows users to create, delete, prioritize, and reorder tasks w
 * React.js
 * Vite
 * Redux Toolkit
-* Axios
+* React Redux
 * @hello-pangea/dnd
 * CSS
-
-## Backend
-
-* Node.js
-* Express.js
-* MongoDB Atlas
-* Mongoose
-* dotenv
-* CORS
 
 ---
 
 # 📂 Project Structure
 
 ```bash
-fullstack-modern-task-manager/
+modern-task-manager/
 │
-├── frontend/
-│   ├── src/
-│   │   ├── app/
-│   │   ├── features/
-│   │   │   └── tasks/
-│   │   ├── components/
-│   │   ├── App.jsx
-│   │   └── main.jsx
+├── src/
+│   ├── app/
+│   │   └── store.js
 │   │
-│   ├── package.json
-│   └── vite.config.js
+│   ├── features/
+│   │   └── tasks/
+│   │       ├── TaskForm.jsx
+│   │       ├── TaskList.jsx
+│   │       └── taskSlice.js
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
 │
-├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   ├── .env
-│   └── package.json
-│
+├── public/
+├── package.json
+├── vite.config.js
 └── README.md
 ```
 
@@ -86,17 +66,17 @@ fullstack-modern-task-manager/
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/janhaviagrawal1/fullstack-modern-task-manager.git
+git clone https://github.com/janhaviagrawal1/modern-task-manager.git
 ```
 
 ---
 
-# 🚀 Frontend Setup
+# 🚀 Setup Project
 
-## Navigate to frontend
+## Navigate to project folder
 
 ```bash
-cd frontend
+cd modern-task-manager
 ```
 
 ## Install dependencies
@@ -105,13 +85,13 @@ cd frontend
 npm install
 ```
 
-## Start frontend
+## Start development server
 
 ```bash
 npm run dev
 ```
 
-Frontend runs on:
+Application runs on:
 
 ```bash
 http://localhost:5173
@@ -119,97 +99,52 @@ http://localhost:5173
 
 ---
 
-# 🚀 Backend Setup
-
-## Navigate to backend
+# 📦 Main Dependencies
 
 ```bash
-cd backend
-```
-
-## Install dependencies
-
-```bash
-npm install
-```
-
-## Create .env file
-
-```env
-MONGO_URI=your_mongodb_connection_string
-PORT=5000
-```
-
-## Start backend server
-
-```bash
-node server.js
-```
-
-Backend runs on:
-
-```bash
-http://localhost:5000
-```
-
----
-
-# 📡 API Endpoints
-
-## GET Tasks
-
-```http
-GET /api/tasks
-```
-
-## CREATE Task
-
-```http
-POST /api/tasks
-```
-
-## DELETE Task
-
-```http
-DELETE /api/tasks/:id
-```
-
-## REORDER Tasks
-
-```http
-PUT /api/tasks/reorder
+npm install @reduxjs/toolkit react-redux
+npm install @hello-pangea/dnd
 ```
 
 ---
 
 # 🧠 Key Implementations
 
-## 🔥 Optimistic UI Updates
+## 🔥 Drag & Drop Functionality
 
-Implemented optimistic rendering for drag-and-drop functionality to provide instant visual feedback while asynchronously persisting changes to the backend.
-
----
-
-## 🔥 Persistent Task Ordering
-
-Task positions are stored in MongoDB using an `order` field to maintain drag-and-drop positions even after page refresh.
+Implemented drag-and-drop task reordering using `@hello-pangea/dnd` for a smooth and interactive user experience.
 
 ---
 
 ## 🔥 Redux Toolkit State Management
 
-Used Redux Toolkit with async thunks for scalable and maintainable frontend state management.
+Used Redux Toolkit for centralized and scalable state management across the application.
+
+---
+
+## 🔥 Optimistic UI Updates
+
+Implemented instant UI updates during drag-and-drop interactions for improved responsiveness and better user experience.
+
+---
+
+# 🎨 UI Features
+
+* Clean modern layout
+* Responsive design
+* Theme toggle support
+* Priority-based task highlighting
 
 ---
 
 # 📸 Future Enhancements
 
+* Backend API integration
+* MongoDB database support
 * User Authentication
-* Task Categories
-* Due Dates & Reminders
-* AI-based Smart Prioritization
-* Real-time Collaboration
-* PWA Support
+* Due dates and reminders
+* AI-based task prioritization
+* Progressive Web App (PWA) support
 
 ---
 
@@ -225,14 +160,12 @@ GitHub:
 
 # ⭐ Project Highlights
 
-* Fullstack MERN Architecture
 * Modern React Hooks
-* Drag & Drop Functionality
-* MongoDB Integration
-* RESTful APIs
-* Responsive UI
-* Persistent Database Storage
-* Production-style Folder Structure
+* Redux Toolkit Architecture
+* Drag & Drop Interactions
+* Responsive Frontend Design
+* Component-based Structure
+* Clean and Maintainable Code
 
 ---
 
