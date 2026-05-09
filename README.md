@@ -137,17 +137,6 @@ Implemented instant UI updates during drag-and-drop interactions for improved re
 
 ---
 
-# 📸 Future Enhancements
-
-* Backend API integration
-* MongoDB database support
-* User Authentication
-* Due dates and reminders
-* AI-based task prioritization
-* Progressive Web App (PWA) support
-
----
-
 # 👩‍💻 Author
 
 Janhavi Agrawal
